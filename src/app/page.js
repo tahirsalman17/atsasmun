@@ -13,10 +13,10 @@ import ContextPage from "./Context/ContextPage";
 import ConnotFound from '@/app/ConnotFound/page'
 import HeroSection from "./(component)/herosection/HeroSection";
 export default function Home() {
-const {refresh,setRefresh} = useContext(ContextPage);
+  const { refresh, setRefresh } = useContext(ContextPage);
   useEffect(() => {
-    
-    if (refresh==true) {
+    // sjsklkskskks
+    if (refresh == true) {
       window.location.reload();
       setRefresh(false);
     }
@@ -24,20 +24,20 @@ const {refresh,setRefresh} = useContext(ContextPage);
 
   return (
     <>
-    {/* <ConnotFound/> */}
-  <HeroSection/>
-  <Events/>
-  <OurMission/>
-  
-  {/* <Video/> */}
-  
-  <AtsasMun/>
-  <Gallery/>
-  <Faq/>
-  <Contact/>
-  <Footer/>
-  <ScrollToTop/>
-  <Whatsapp/>
-  </>  
+      {/* <ConnotFound/> */}
+      <HeroSection />
+      <Events />
+      <OurMission />
+
+      {/* <Video/> */}
+
+      <AtsasMun />
+      <Gallery />
+      <Faq />
+      <Contact />
+      <Footer />
+      <ScrollToTop />
+      <Whatsapp />
+    </>
   );
 }

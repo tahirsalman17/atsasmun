@@ -15,7 +15,6 @@ import HeroSection from "./(component)/herosection/HeroSection";
 export default function Home() {
   const { refresh, setRefresh } = useContext(ContextPage);
   useEffect(() => {
-    // sjsklkskskks
     if (refresh == true) {
       window.location.reload();
       setRefresh(false);

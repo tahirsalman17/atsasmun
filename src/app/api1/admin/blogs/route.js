@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { collections } from "@/app/lib/github-db";
+import { collections } from "@/app/lib/db";
 import { verifyAdmin, unauthorizedResponse } from "@/app/lib/auth";
 
 // GET - fetch all blogs with pagination

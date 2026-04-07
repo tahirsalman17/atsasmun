@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { collections } from '@/app/lib/github-db';
+import { collections } from '@/app/lib/db';
 
 export async function GET(request) {
     // Basic security check (optional: add a secret token as a query param)

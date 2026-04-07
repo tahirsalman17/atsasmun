@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { collections } from "@/app/lib/github-db";
+import { collections } from "@/app/lib/db";
 
 // Map Strapi API names to our collections
 const apiToCollection = {

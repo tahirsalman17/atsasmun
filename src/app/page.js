@@ -27,6 +27,7 @@ export default function Home() {
       <HeroSection />
       <Events />
       <OurMission />
+      {/* nothing else  */}
 
       {/* <Video/> */}
 

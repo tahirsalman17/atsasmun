@@ -14,6 +14,12 @@ const nextConfig = {
         port: '',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'modelunitednation.org',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   webpack(config, { isServer }) {

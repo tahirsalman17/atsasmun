@@ -12,6 +12,7 @@ import { useContext, useEffect } from "react";
 import ContextPage from "./Context/ContextPage";
 import ConnotFound from '@/app/ConnotFound/page'
 import HeroSection from "./(component)/herosection/HeroSection";
+import LevelsOfParticipation from "./(component)/levelsOfParticipation/LevelsOfParticipation";
 export default function Home() {
   const { refresh, setRefresh } = useContext(ContextPage);
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Home() {
       {/* <ConnotFound/> */}
       <HeroSection />
       <Events />
+      <LevelsOfParticipation />
       <OurMission />
 
       {/* <Video/> */}

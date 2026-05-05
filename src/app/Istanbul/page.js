@@ -41,7 +41,7 @@ export default function Page() {
         Pricelink="/Istanbulfee"
         StartDays={istanbuldates.startdate}
         EndDays={istanbuldates.enddate}
-        monthsDetils={`${istanbuldates.month} ${istanbuldates.year} G Rotana Hotel`}
+        monthsDetils={`${istanbuldates.month} ${istanbuldates.year} Euro Park Otel`}
         style="text-blue-400"
         stlyle2="hover:text-blue-400"
       />
@@ -71,8 +71,8 @@ export default function Page() {
         img2={event2}
         img3={event3}
         img4={event4}
-        img5={event5}
-        img6={event6}
+        img5={event6}
+        img6={event5}
         font={plusJakartaSans.className}
       />
       <Shedule timeing="Istanbul, Turkey" />

@@ -6,7 +6,7 @@ import hotelx2 from "@/app/public/img/hotelx2.webp";
 export default function Event(props) {
   // Mock data for the events
   const events = [
-    {      
+    {
       title: "Committee Sessions",
       image: props.img1,
     },
@@ -15,7 +15,7 @@ export default function Event(props) {
       image: props.img2,
     },
     {
-      title: "open Mic Night",
+      title: "Open Mic Night",
       image: props.img3,
     },
     {
@@ -24,13 +24,13 @@ export default function Event(props) {
     },
     {
       title: "The Grand Closing Dinner",
-      image: hotelx2,
+      image: props.img6 || hotelx2,
     },
     {
       title: "Scavenger Hunt",
       image: props.img5,
     },
-    
+
   ];
 
 
@@ -55,7 +55,7 @@ export default function Event(props) {
               className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
             >
               {/* Image */}
-              <div className="relative h-48 sm:h-56 lg:h-64">
+              <div className="relative h-64 sm:h-72 lg:h-96">
                 <Image
                   src={event.image} // Imported image reference
                   alt={event.title}
@@ -64,16 +64,13 @@ export default function Event(props) {
                   className="rounded-t-lg"
                 />
                 {/* Decorative Elements */}
-              
-             
+
+
               </div>
               {/* Title */}
               <div className="p-4 text-center">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-700">
-                  {event.title}{" "}
-                  <span className="text-gray-400 transition hover:text-gray-600">
-                    ▼
-                  </span>
+                <h3 className={`${props.font} text-lg sm:text-xl font-semibold text-gray-700`}>
+                  {event.title}
                 </h3>
               </div>
             </div>

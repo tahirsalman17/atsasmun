@@ -30,18 +30,16 @@ const ScrollToTop = () => {
 
   return (
     <>
-
-
-    
       {isVisible && (
-      <button
-      onClick={scrollToTop}
-      className="fixed bottom-7 right-6 z-50 w-10 h-10 border-2 border-blue-500 bg-transparent text-blue-500 rounded-full flex items-center justify-center shadow-md hover:bg-blue-500 hover:text-white transition-all duration-300"
-      aria-label="Scroll to Top"
-    >
-      <FaArrowUp />
-    </button>
-    
+        //   <button
+        //   onClick={scrollToTop}
+        //   className="fixed bottom-7 right-6 z-50 w-10 h-10 border-2 border-blue-500 bg-transparent text-blue-500 rounded-full flex items-center justify-center shadow-md hover:bg-blue-500 hover:text-white transition-all duration-300"
+        //   aria-label="Scroll to Top"
+        // >
+        //   <FaArrowUp />
+        // </button>
+        <div>
+        </div>
       )}
     </>
   );

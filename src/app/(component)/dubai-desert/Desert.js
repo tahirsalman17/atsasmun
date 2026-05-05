@@ -14,35 +14,35 @@ export default function Desert({ Desert, Desert2, Desert3, heading }) {
       {/* Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8 justify-center items-center">
         {/* First Image */}
-        <div className="w-[250px] h-[180px] sm:w-[270px] sm:h-[190px] md:w-[300px] md:h-[200px] lg:w-[310px] lg:h-[230px] overflow-hidden rounded-lg mx-auto">
+        <div className="w-[250px] h-[320px] sm:w-[270px] sm:h-[350px] md:w-[300px] md:h-[380px] lg:w-[310px] lg:h-[400px] overflow-hidden rounded-lg mx-auto">
           <Image
             src={Desert}
             alt="Camels walking in the desert"
             className="w-full h-full object-cover rounded-lg"
             width={400}
-            height={280}
+            height={500}
           />
         </div>
 
         {/* Second Image */}
-        <div className="w-[250px] h-[180px] sm:w-[270px] sm:h-[190px] md:w-[300px] md:h-[200px] lg:w-[310px] lg:h-[230px] overflow-hidden rounded-lg mx-auto">
+        <div className="w-[250px] h-[320px] sm:w-[270px] sm:h-[350px] md:w-[300px] md:h-[380px] lg:w-[310px] lg:h-[400px] overflow-hidden rounded-lg mx-auto">
           <Image
             src={Desert2}
             alt="Running camels in the desert"
             className="w-full h-full object-cover rounded-lg"
-            width={200}
-            height={280}
+            width={400}
+            height={500}
           />
         </div>
 
         {/* Third Image */}
-        <div className="w-[250px] h-[180px] sm:w-[270px] sm:h-[190px] md:w-[300px] md:h-[200px] lg:w-[310px] lg:h-[230px] overflow-hidden rounded-lg mx-auto">
+        <div className="w-[250px] h-[320px] sm:w-[270px] sm:h-[350px] md:w-[300px] md:h-[380px] lg:w-[310px] lg:h-[400px] overflow-hidden rounded-lg mx-auto">
           <Image
             src={Desert3}
             alt="SUV dune bashing in the desert"
             className="w-full h-full object-cover rounded-lg"
             width={400}
-            height={280}
+            height={500}
           />
         </div>
       </div>

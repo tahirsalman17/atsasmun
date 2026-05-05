@@ -52,10 +52,10 @@ const Whatsapp = () => {
           setIsChatVisible((prev) => !prev);
         }}
         className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-50 flex flex-col items-center justify-center bg-[#4eb2e3] text-black px-5 py-2 sm:px-6 sm:py-3 rounded-full shadow-2xl hover:bg-[#3ea0d1] transition-transform transform hover:scale-105"
-        aria-label="Do you need assistance?"
+        aria-label="Do you need assistance? We are here to help"
       >
-        <span className="font-bold text-xs sm:text-sm tracking-wide">Do you need assistance?</span>
-        <span className="text-[10px] sm:text-xs font-medium">We are here to help</span>
+        <span className="text-xs sm:text-sm tracking-wide">Do you need assistance?</span>
+        <span className="text-xs sm:text-sm tracking-wide">We are here to help</span>
       </button>
 
       {/* Support Options Modal */}

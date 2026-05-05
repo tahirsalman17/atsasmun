@@ -296,7 +296,7 @@ export default function Home() {
   const [disability, setDisability] = useState("");
   const [referralCode, setReferralCode] = useState("");
   const [shirtSize, setShirtSize] = useState("");
-  const [destination, setDestination] = useState(check);
+  const [destination, setDestination] = useState(check || "Istanbul, Turkey");
   const [foodPreference, setFoodPreference] = useState("");
   const [heardAboutUs, setHeardAboutUs] = useState("");
   const [name, setName] = useState('');
@@ -528,7 +528,7 @@ export default function Home() {
     HaveYouAttendSimilarInternationalProgramsBefore: '',
     WhatExcitesYouTheMostAboutJoiningOurProgram: '',
     AnyThingElseThatYouWantToShare: '',
-    Destinations: check == "" ? "" : check,
+    Destinations: check == "" ? "Istanbul, Turkey" : check,
   });
 
   useEffect(() => {
@@ -1068,8 +1068,8 @@ export default function Home() {
                                   {/* {no1 && <option value="Dubai, UAE">Dubai, UAE</option>} */}
                                   {/* {no2 && <option value="Baku, Azerbaijan">Baku, Azerbaijan</option>}
                                   {no3 && <option value="New York, USA">New York, USA</option>} */}
-                                  {no5 && <option value="London, UK">London, UK</option>}
-                                  {no4 && <option value="Riyadh, Saudi Arabia">Riyadh, Saudi Arabia</option>}
+                                  {/* {no5 && <option value="London, UK">London, UK</option>} */}
+                                  {/* {no4 && <option value="Riyadh, Saudi Arabia">Riyadh, Saudi Arabia</option>} */}
 
                                 </select>
                               </div>

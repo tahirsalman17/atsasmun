@@ -10,26 +10,29 @@ import Shedule from "@/app/(component)/dubai-shedule/Shedule";
 import Footer from "@/app/(component)/footer/Footer";
 import ScrollToTop from "@/app/(component)/Scrolltotop/ScrollToTop";
 import Whatsapp from "@/app/(component)/whatsapp/Whatsapp";
-import hotelx1 from "@/app/public/img/bghotelistanbul1.jpg";
-import hotelx2 from "@/app/public/img/hotelistanbul2.jpg";
-import hotelx3 from "@/app/public/img/hotelistanbul3.jpg";
-import hotelx4 from "@/app/public/img/hotelistanbul4.jpg";
-import hotelx5 from "@/app/public/img/hotelistanbul5.jpg";
-import event1 from "@/app/public/img/Committee Sessions.png";
-import event2 from "@/app/public/img/Cultural Global Village.jpg";
-import event3 from "@/app/public/img/Open Mic Night.jpeg";
-import event4 from "@/app/public/img/Opening Ceremony.jpg";
-import event5 from "@/app/public/img/Scavenger Hunt.jpg";
-import img12 from "@/app/public/img/turkeytour1.jpeg";
-import img13 from "@/app/public/img/turkeytour2.jpeg";
-import img14 from "@/app/public/img/turkeytour3.jpeg";
+import hotelx1 from "@/app/public/img/hotelistanbulx5.jpg";
+import hotelx2 from "@/app/public/img/hotelistanbulx2.jpg";
+import hotelx3 from "@/app/public/img/hotelistanbulx3.jpg";
+import hotelx4 from "@/app/public/img/hotelistanbulx4.jpg";
+import hotelx5 from "@/app/public/img/hotelistanbulx1.jpg";
+import event1 from "@/app/public/img/istanbul-event-1.jpg";
+import event2 from "@/app/public/img/istanbul-event-2.jpg";
+import event3 from "@/app/public/img/istanbul-event-3.jpg";
+import event4 from "@/app/public/img/istanbul-event-4.jpg";
+import event5 from "@/app/public/img/istanbul-event-5.jpg";
+import event6 from "@/app/public/img/istanbul-event-dinner.jpg";
+import img12 from "@/app/public/img/turkeytour_hagiasofia.jpg";
+import img13 from "@/app/public/img/turkeytour_grandbazaar.jpg";
+import img14 from "@/app/public/img/turkeytour_hagia_sofia_new.jpg";
 import ContextPage from "../Context/ContextPage";
+import { Plus_Jakarta_Sans } from "next/font/google"
 
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export default function Page() {
   // ✅ Get data from Context instead of local state
   // noman/////////
-const {istanbuldates, setIstanbuldates} = useContext(ContextPage);
+  const { istanbuldates, setIstanbuldates } = useContext(ContextPage);
   return (
     <>
       <Dubaih
@@ -43,6 +46,7 @@ const {istanbuldates, setIstanbuldates} = useContext(ContextPage);
         stlyle2="hover:text-blue-400"
       />
       <AboutDubai
+        font={plusJakartaSans.className}
         aboutTitle="Istanbul"
         about="Atsas International Model United Nations (Atsas MUN), the most prominent venue in Istanbul for the development of leadership skills, global discourse, and young diplomacy. Passionate students from all over the world come together for Atsas MUN to participate in thought-provoking discussions, work together to find answers to global problems, and hone their public speaking, negotiation, and critical thinking abilities."
       />
@@ -58,9 +62,9 @@ const {istanbuldates, setIstanbuldates} = useContext(ContextPage);
         img2={hotelx3}
         img3={hotelx2}
         img4={hotelx5}
-        map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2510.9473144053363!2d28.809779175186865!3d41.05945921627315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5d52a209bfd%3A0xc941d8ad912e1418!2sG%20Rotana!5e1!3m2!1sen!2sus!4v1744738203590!5m2!1sen!2sus"
-        hname="G Rotana Hotel."
-        disc="Our goal is to be recognized in Turkey and Istanbul for our service and quality, combining global standards with Turkish hospitality to be the top choice for guests. G Rotana Hotel also aims to expand its investments in the thriving tourism and hotel industry."
+        map="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3010.45966980608!2d28.6428701!3d41.0151983!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f0944472211%3A0x5df99e24d97fb85e!2sEuro%20Park%20Otel!5e0!3m2!1sen!2s!4v1777698969084!5m2!1sen!2s"
+        hname="Euro Park Otel"
+        disc="Euro Park Otel is a great option for your stay, whether you're visiting for a conference, as an international delegate, or simply enjoying Istanbul’s beauty. The hotel offers quality service and a comfortable environment for all guests."
       />
       <Event
         img1={event1}
@@ -68,6 +72,8 @@ const {istanbuldates, setIstanbuldates} = useContext(ContextPage);
         img3={event3}
         img4={event4}
         img5={event5}
+        img6={event6}
+        font={plusJakartaSans.className}
       />
       <Shedule timeing="Istanbul, Turkey" />
       <ScrollToTop />

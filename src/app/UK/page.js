@@ -24,8 +24,9 @@ import ParisCityTour1 from "@/app/public/img/LondenCityTour1.jpeg";
 import ParisCityTour2 from "@/app/public/img/LondenCityTour2.jpg";
 import ParisCityTour3 from "@/app/public/img/LondenCityTour3.jpeg";
 import ContextPage from "../Context/ContextPage";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-// ✅ Import context
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export default function Page() {
   // ✅ Access London dates from context
@@ -45,8 +46,9 @@ export default function Page() {
       />
 
       <AboutDubai
+        font={plusJakartaSans.className}
         aboutTitle="London"
-        about="Atsas MUN, which takes place in the famous setting of one of the liveliest cities on earth, blends scholarly debates with the exceptional chance to experience London's rich history and vibrant atmosphere. With a variety of committees and thoughtfully chosen subjects, attendees will come away feeling motivated and equipped to change the world."
+        about="Atsas MUN, which takes place in the famous setting of one of the liveliest cities on earth, blends scholarly debates with the exceptional chance to experience London’s rich history and vibrant atmosphere. With a variety of committees and thoughtfully chosen subjects, attendees will come away feeling motivated and equipped to change the world."
       />
 
       <Desert

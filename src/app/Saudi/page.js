@@ -22,10 +22,12 @@ import event3 from "@/app/public/img/Saudiscavenger hunt.jpg";
 import event4 from "@/app/public/img/Saudiopen mic.jpg";
 import event5 from "@/app/public/img/SaudiOpening Ceremony.jpg";
 import SaudiCityTour11 from "@/app/public/img/SaudiAl Faisaliah Tower.jpg";
-import SaudiCityTour2 from "@/app/public/img/SaudiBoulevard Riyadh City.jpg";
+import SaudiCityTour2 from "@/app/public/img/riyadh-center-image.jpg";
 import SaudiCityTour3 from "@/app/public/img/SaudiKingdom Centre Tower.jpg";
 import ContextPage from "../Context/ContextPage";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 export default function Page() {
   // ✅ Context se state lena (no local useState)
   const { saudidates, setSaudidates } = useContext(ContextPage);
@@ -44,8 +46,9 @@ export default function Page() {
       />
 
       <AboutDubai
+        font={plusJakartaSans.className}
         aboutTitle="Riyadh"
-        about="ATSASMUN Riyadh offers a distinctive opportunity to engage in forward-thinking diplomacy at the crossroads of tradition and innovation. Set in the vibrant capital of Saudi Arabia, delegates will explore bold dialogue against the backdrop of a city rich in cultural heritage and rapidly emerging as a global hub. With diverse committees and thought-provoking topics, this conference promises an unforgettable experience—where the spirit of collaboration meets the future of international relations."
+        about="ATSASMUN Riyadh offers a distinctive opportunity to engage in forward-thinking diplomacy at the crossroads of tradition and innovation. Set in the vibrant capital of Saudi Arabia, delegates will explore bold dialogue against the backdrop of a city rich in cultural heritage and rapidly emerging as a global hub. With diverse committees and thought-provoking topics, this conference promises an unforgettable experience."
       />
 
       <Desert

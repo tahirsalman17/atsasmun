@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { ToastContainer } from "react-toastify";
@@ -6,11 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { Toaster } from "react-hot-toast";
 import { ContextProvider } from "./Context/ContextPage";
 
-// Define fonts with localFont
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = localFont({
@@ -41,13 +40,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
 
         {/* Preload Custom Fonts */}
-        <link
-          rel="preload"
-          href="/fonts/GeistVF.woff"
-          as="font"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
         <link
           rel="preload"
           href="/fonts/GeistMonoVF.woff"
@@ -85,7 +77,7 @@ export default function RootLayout({ children }) {
         {/* End Meta Pixel */}
       </head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${inter.className} ${geistMono.variable} antialiased`}>
         <ContextProvider>
           <NextTopLoader />
           <Toaster />

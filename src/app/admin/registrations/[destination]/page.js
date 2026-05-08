@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useParams } from "next/navigation";
 import {
   FaSearch,
@@ -38,11 +38,7 @@ export default function RegistrationModule() {
   const [deleteConfirm, setDeleteConfirm] = useState(null);
   const [deleting, setDeleting] = useState(false);
 
-  useEffect(() => {
-    fetchRegistrations();
-  }, [destination, page, search]);
-
-  const fetchRegistrations = async () => {
+  const fetchRegistrations = useCallback(async () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("admin_token");
@@ -75,7 +71,11 @@ export default function RegistrationModule() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [destination, page, search]);
+
+  useEffect(() => {
+    fetchRegistrations();
+  }, [fetchRegistrations]);
 
   const handleDelete = async (id) => {
     setDeleting(true);

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter, useParams } from "next/navigation";
 import {
   FaArrowLeft,
@@ -31,11 +31,7 @@ export default function EditBlog() {
   const params = useParams();
   const blogId = parseInt(params.id);
 
-  useEffect(() => {
-    fetchBlog();
-  }, []);
-
-  const fetchBlog = async () => {
+  const fetchBlog = useCallback(async () => {
     try {
       const token = localStorage.getItem("admin_token");
       const response = await fetch(`/api1/admin/blogs?page=1&pageSize=500`, {
@@ -58,7 +54,11 @@ export default function EditBlog() {
     } finally {
       setFetching(false);
     }
-  };
+  }, [blogId]);
+
+  useEffect(() => {
+    fetchBlog();
+  }, [fetchBlog]);
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];

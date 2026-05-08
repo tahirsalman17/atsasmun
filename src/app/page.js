@@ -20,7 +20,7 @@ export default function Home() {
       window.location.reload();
       setRefresh(false);
     }
-  }, []);
+  }, [refresh, setRefresh]);
 
   return (
     <>

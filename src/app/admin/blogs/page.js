@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -24,11 +24,7 @@ export default function AdminBlogs() {
   const [deleting, setDeleting] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    fetchBlogs();
-  }, [page, search]);
-
-  const fetchBlogs = async () => {
+  const fetchBlogs = useCallback(async () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("admin_token");
@@ -58,7 +54,11 @@ export default function AdminBlogs() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, search]);
+
+  useEffect(() => {
+    fetchBlogs();
+  }, [fetchBlogs]);
 
   const handleDelete = async (id) => {
     setDeleting(true);

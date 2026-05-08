@@ -387,7 +387,7 @@ export default function Home() {
       })
 
     }
-  }, [destination])
+  }, [destination]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   useEffect(() => {
@@ -449,7 +449,7 @@ export default function Home() {
 
 
     }
-  }, [check, setCheck])
+  }, [check, setCheck]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (destination == "Istanbul, Turkey") {

@@ -1,9 +1,6 @@
-import Stripe from "stripe";
 import nodemailer from "nodemailer";
 import { setTimeout } from "timers/promises";
 import { NextResponse } from "next/server";
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Email Sending Function
 async function sendEmail(to, subject, text) {
@@ -34,6 +31,8 @@ async function sendEmail(to, subject, text) {
 
 // Invoice Reminder & Expiration Function
 async function handleInvoiceLifecycle(invoiceId, customerEmail) {
+  const Stripe = (await import("stripe")).default;
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   await setTimeout(60 * 1000); // Wait 4 days
   const invoice = await stripe.invoices.retrieve(invoiceId);
 
@@ -56,6 +55,8 @@ async function handleInvoiceLifecycle(invoiceId, customerEmail) {
 
 // Stripe Webhook Handler
 export async function POST(req) {
+  const Stripe = (await import("stripe")).default;
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   const sig = req.headers.get("stripe-signature");
   let event;
 
